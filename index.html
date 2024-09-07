@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!--头部信息-->
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--title keywords description 请改为自己的-->
+<title>DASHABI指北</title>
+<meta name="keywords" content="DASHABI起始页"/>
+<meta name="description" content="简单但且没用的导航"/>
+
+<!--网站favicon可以没有或者改为自己的-->
+<link rel="shortcut icon" type="image/x-icon" href="./img/butterfly.png"/>
+
+<!--CSS 若不需要变动样式不用改-->
+<link href="min.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a:hover,a:active,a:focus {
+    text-decoration: none;
+}
+body {
+    background-image: url(./img/bg.png);
+    background-repeat:repeat;
+    background-attachment:fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+i.icon,i.fa {
+    margin-right: 6px
+}
+.col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    padding: 0px 5px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 50px;
+    background: #FFF;
+}
+header .logo {
+    font-size: 30px;
+    height: 50px;
+    margin: 0;
+    font-weight: 400;
+    position: relative;
+    z-index: 99;
+    border-bottom: 1px solid #e8e8e8;
+    background: #FFF;
+    text-align:center;
+}
+header .main {
+    position: relative;
+}
+header .nav {
+    width: 100%;
+    margin-left: 25px;
+    background: #FFF;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+ /* Firefox 4 */
+    -webkit-transition: all 0.4s ease;
+ /* Safari  Chrome */
+    -o-transition: all 0.4s ease;
+ /* Opera */
+    position: absolute;
+    top: -300px;
+    left: 0;
+}
+header .showNav {
+    top: 50px;
+    box-shadow: 0 5px 5px rgba(204,204,204,.15);
+    -moz-box-shadow: 0 5px 5px rgba(204,204,204,.15);
+}
+header .nav li {
+    font-size: 16px;
+}
+header .nav a {
+    display: block;
+    line-height: 40px;
+    font-size: 16px;
+    color: #959595;
+    padding: 0 25px;
+    border-bottom: 1px solid #f5f5f5;
+}
+header .nav a:hover {
+    border-color: #459df5;
+    color: #459df5;
+}
+header .head-btn {
+    float: right;
+    line-height: 60px;
+}
+header .head-btn a {
+    margin-left: 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #03b8cf;
+    border: 1px solid #e5e5e5;
+    transition: all .2s;
+    -moz-transition: all .2s;
+ /* Firefox 4 */
+    -webkit-transition: all .2s;
+ /* Safari Chrome */
+    -o-transition: all .2s;
+ /* Opera */
+}
+header .head-btn a:hover {
+    background: #03b8cf;
+    color: #FFF;
+    border: 1px solid #03b8cf;
+}
+header .head-btn a>i {
+    margin-right: 0px;
+    font-size: 15px;
+}
+header .nav-btn {
+    position: fixed;
+    border: none;
+    background: transparent;
+    top: 0;
+    left: 10px;
+    outline: 0;
+    margin-top: 10px;
+    z-index: 100
+}
+header .nav-btn {
+    left: inherit;
+    right: 10px;
+}
+header .nav-btn .icon-line {
+    display: block;
+    margin: 6px 0;
+    width: 25px;
+    height: 2px;
+    background: #999;
+    cursor: pointer;
+    transition: all .4s ease;
+    -moz-transition: all .4s ease;
+ /* Firefox 4 */
+    -webkit-transition: all .4s ease;
+ /* Safari  Chrome */
+    -o-transition: all .4s ease;
+ /* Opera */
+}
+header .nav-btn .middle {
+    margin: 0 auto;
+}
+header .animated2 .top {
+    transform: translateY(8px) rotateZ(45deg);
+    -ms-transform: translateY(8px) rotateZ(45deg);
+   /* IE 9 */
+    -moz-transform: translateY(8px) rotateZ(45deg);
+   /* Firefox */
+    -webkit-transform: translateY(8px) rotateZ(45deg);
+ /* Safari 鍜  Chrome */
+    -o-transform: translateY(8px) rotateZ(45deg);
+   /* Opera */
+}
+header .animated2 .middle {
+    width: 0;
+}
+header .animated2 .bottom {
+    transform: translateY(-8px) rotateZ(-45deg);
+    -ms-transform: translateY(-8px) rotateZ(-45deg);
+   /* IE 9 */
+    -moz-transform: translateY(-8px) rotateZ(-45deg);
+   /* Firefox */
+    -webkit-transform: translateY(-8px) rotateZ(-45deg);
+ /* Safari Chrome */
+    -o-transform: translateY(-8px) rotateZ(-45deg);
+   /* Opera */
+}
+.left-bar {
+    position: fixed;
+    top: 50px;
+    left: -240px;
+    width: 200px;
+    max-width: 100%;
+    height: 100%;
+    background: #353535;
+    z-index: 12;
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+ /* Firefox 4 */
+    -webkit-transition: all 0.4s ease;
+ /* Safari 鍜  Chrome */
+    -o-transition: all 0.4s ease;
+ /* Opera */
+    transform: translateZ(0);
+    -ms-transform: translateZ(0);
+   /* IE 9 */
+    -moz-transform: translateZ(0);
+   /* Firefox */
+    -webkit-transform: translateZ(0);
+ /* Safari 鍜  Chrome */
+    -o-transform: translateZ(0);
+   /* Opera */
+}
+.left-bar .header {
+    padding: 0px 15px;
+    border-bottom: 1px solid #464646;
+}
+.left-bar .header h2 {
+    font-size: 17px;
+    line-height: 40px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    font-weight: 400;
+    display: block;
+    color: #ccc;
+}
+.left-bar .menu {
+    height: 450px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #424242
+}
+.left-bar .menu ul li a {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #777;
+    padding-left: 38px;
+}
+.scrollcontent {
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-right: 4px;
+    padding-top: 5px
+}
+.left-bar .menu ul li a:hover {
+    background: #f5f5f5
+}
+.left-bar .menu ul li i.fa {
+    width: 15px;
+    text-align: center;
+    margin-right: 20px
+}
+.left-bar .tree li.open > ul::-webkit-scrollbar {
+    width: 3px;
+    margin-right: 2px
+}
+.menu-about p {
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+}
+#content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#content > .Off-left-menu {
+    display: none;
+}
+#content > div.center-main {
+    margin: 0 auto;
+}
+.sousuo {
+    padding: 35px 0;
+}
+.search {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+.search-box {
+    height: 50px;
+  /*box-shadow: 0px 0px 2px 0px #ccc;*/
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-flex;
+ /* Safari */
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #e6e6e6
+}
+.search-engine-name {
+    width: 69px;
+    height: 50px;
+    background: #7253CB;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+}
+.search-input {
+    box-sizing: border-box;
+    flex: 1;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #999;
+    border: none;
+    outline: none;
+    padding-left: 6px;
+}
+input::-webkit-input-placeholder {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+.search-btn {
+    width: 80px;
+    height: 50px;
+    background: #7253CB;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+}
+.search-engine {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+    padding: 15px 0 0 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px 0px #d8d7d7;
+    transition: all 0.3s;
+    display: none;
+    z-index: 999
+}
+.search-engine-head {
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-right: 15px;
+}
+.search-engine-tit {
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    color: #999;
+}
+.search-engine ul::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -15px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+}
+.search-engine-list::after {
+    content: '';
+    width: 70px;
+    height: 18px;
+    position: absolute;
+    top: -17px;
+    left: 1px;
+}
+.search-engine-list li {
+    float: left;
+    width: 30%;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 5px 10px 5px 10px;
+    margin: 0 10px 10px 0;
+    background: #f9f9f9;
+    color: #999;
+    cursor: pointer
+}
+.search-engine-list li img {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 2.5px;
+}
+#content .content-box {
+    padding-top: 51px
+}
+.content-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.item {
+    width: 100%;
+}
+.item > .container-fluid {
+    padding-top: 0;
+    margin-top: 0;
+}
+.item > .container-fluid .row {
+    padding: 10px 5px;
+}
+.item-tit > strong {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+.item-tit > strong > i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+.card-link {
+    display: block;
+    padding: 10px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: #fff;
+    transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+ /* Firefox 4 */
+    -webkit-transition: all 0.2s ease-out;
+ /* Safari Chrome */
+    -o-transition: all 0.2s ease-out;
+ /* Opera */
+}
+.card-link:hover {
+    transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+   /* IE 9 */
+    -moz-transform: translateY(-5px);
+   /* Firefox */
+    -webkit-transform: translateY(-5px);
+ /* Safari  Chrome */
+    -o-transform: translateY(-5px);
+   /* Opera */
+    box-shadow: 4px 4px 10px rgba(204, 204, 204, 0.5);
+    -moz-box-shadow: 4px 4px 10px rgba(204, 204, 204, 0.5);
+ /* Firefox */
+}
+.card-tit {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.card-tit img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.card-desc {
+    color: gray;
+    font-size: 12px;
+    padding-top: 10px;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.content-box .list-box {
+    background: #FFF;
+    padding: 20px 10px 0px 10px;
+    margin: 0;
+}
+#get-top {
+    width: 40px;
+    height: 40px;
+    background: #7253CB;
+    color: #FFF;
+    position: fixed;
+    right: 15px;
+    bottom: 55px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+}
+#get-top i {
+    margin: 0;
+    font-size: 20px;
+}
+.footer {
+    padding: 15px 20px 10px 20px;
+    border-top: 1px solid #d0d0d0;
+    background-color: #e8e8e8;
+    text-align: center;
+    font-size: 14px;
+    color: #5d5d5d;
+}
+@media (min-width: 768px) {
+    .col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+        padding: 0 10px
+    }
+    #content .main {
+        padding-top: 51px;
+    }
+    .sousuo {
+        padding: 10px 0 50px 0;
+        margin-top: 0;
+    }
+    .sousuo-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #input {
+        outline: none;
+        padding: 0 10px;
+        height: 46px;
+        line-height: 46px;
+        border: 1px solid #ccc;
+        border-left: none;
+        display: block;
+        padding-left: 90px;
+    }
+    .link-box {
+        width: 12.5%;
+        float: left
+    }
+    .item-tit > strong {
+        padding: 5px 0 0 10px;
+        margin-bottom: 10px;
+    }
+    .get-home {
+        margin: 0;
+        margin-top: 20px;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 992px) {
+    header {
+        height: 60px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    header .main {
+        padding: 0 22px;
+    }
+    header .logo {
+        float: left;
+        font-size: 25px;
+        margin: 0;
+        font-weight: 400;
+        border: none;
+    }
+    header .logo a {
+        display: block;
+        line-height: 50px;
+        color: #484848;
+        font-weight: 400;
+    }
+    header .logo img {
+        width: 30px;
+        vertical-align: -10px;
+    }
+    header .nav {
+        float: left;
+        margin-left: 25px;
+        padding-top: 0px;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+    header .nav li {
+        float: left;
+        font-size: 16px;
+    }
+    header .nav a {
+        display: block;
+        line-height: 59px;
+        color: #959595;
+        padding: 0 18px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    header .nav a:hover {
+        border-color: #7253CB;
+        color: #7253CB;
+    }
+    .left-bar {
+        height: 100%;
+        background: #FFF;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+    .left-bar .header {
+        padding: 11px 0px;
+        border-bottom: none;
+        margin: 0 25px;
+        padding-top: 15px;
+    }
+    .left-bar .header h2 {
+        color: #28b779;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: inherit;
+        border-left: 3px solid #28b779;
+        padding-left: 10px;
+    }
+    .left-bar .menu {
+        height: 600px;
+        border-top: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2
+    }
+    .left-bar .tree-menu {
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .left-bar .tree li.open > ul {
+        height: 281px;
+        background: #f5f5f5;
+    }
+    .tree-menu li li a {
+        color: #797979;
+        font-size: 14px;
+    }
+    .search {
+        width: 650px;
+    }
+    .search-engine {
+        width: 650px;
+    }
+    .search-engine-list li {
+        width: 112px;
+        margin: 0 15px 15px 0;
+    }
+    #content .main {
+        margin-left: 200px;
+        padding-top: 70px
+    }
+    .content-box {
+        padding: 0 10px;
+        padding-top: 61px
+    }
+    .nav-item .container-fluid {
+        padding: 20px 20px 10px 20px;
+    }
+    .item > .container-fluid .row {
+        padding: 0;
+    }
+    .card-box .col-md-3 {
+        padding: 0 7.5px;
+    }
+    .card-link {
+        margin-bottom: 15px;
+    }
+    .main .list-box .menu-list {
+        margin: 0px 10px 20px 10px;
+    }
+    .nav-tabs > li > a {
+        padding: 4px 15px;
+    }
+    .footer {
+        margin-top: 30px;
+    }
+}
+@media (min-width: 1200px) {
+    header .nav a {
+        padding: 0 25px;
+    }
+    .content-box {
+        padding: 0 20px;
+    }
+    .sousuo-form {
+        width: 60%
+    }
+    .item > .container-fluid {
+        padding: 0;
+        padding-top: 91px;
+        margin-top: -65px;
+    }
+}
+@media (min-width: 1700px) {
+    .content-box {
+        max-width: 1400px;
+    }
+    .col-md-3 {
+        width: 20%;
+    }
+}
+</style>
+</head>
+<body id="nav_body">
+<!--[if lt IE 10]>
+<div class="alert alert-danger">
+    您正在使用 
+    <strong>过时的</strong> 浏览器. 请更换一个更好的浏览器来提升用户体验.
+</div>
+<![endif]--><!--头部导航条-->
+<header>
+<div class="main">
+    <h1 class="logo">
+    <a href="index.html">
+    <img src="./img/butterfly.png">
+    <span>不可说</span>
+    </a>
+    </h1>
+    <!--顶部导航条-->
+    <nav class="nav">
+    <ul>
+        <li><a href="https://kochonohate.github.io/" target="_blank">Lost Elysium</a></li>
+        <li><a href="./img/givememoney.jpg" target="_blank">捐助</a></li>
+        <li><a href="./sojo/index.html" target="_blank">广告位招租</a></li>
+    </ul>
+    </nav>
+    <!--便携设备右上角菜单-->
+    <button class="nav-btn visible-xs visible-sm"><span class="icon-line top"></span><span class="icon-line middle"></span><span class="icon-line bottom"></span>
+    </button>
+</div>
+</header>
+<div id="content">
+    <!--左侧目录，导航跳转-->
+    <div class="left-bar">
+        <div class="header">
+            <h2>目录</h2>
+        </div>
+        <div class="menu" id="menu">
+            <ul class="scrollcontent">
+                <!--左侧目录，按照需要修改和添加，参考已有的修改名称和href-->
+                <li><a href="#row-1">不常用服务🔝</a></li>
+                <li><a href="#row-2">DASHABI传媒📺</a></li>
+                <li><a href="#row-3">捕捉市场情绪💸</a></li>
+                <li><a href="#row-4">硒砂瓜1.98一斤🍉</a></li>
+                <li><a href="#row-5">我太想进步了🤲</a></li>
+                <li><a href="#row-6">去你🐴的vx文件传输</a></li>
+                <li><a href="#row-7">唯一指定联系邮箱📧</a></li>
+                <li><a href="#row-8">赛博游乐场🎡</a></li>
+                <li><a href="#row-9">网线直达🗺️</a></li>
+                <li><a href="#row-10">掌上很行📴</a></li>
+                <li><a href="#row-11">同性网项目👬</a></li>
+                <li><a href="#row-12">铁锅大乱炖🥘</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--内容-->
+    <div class="main">
+        <div class="container content-box">
+            <!--搜索栏-->
+            <section class="sousuo">
+            <div class="search">
+                <div class="search-box">
+                    <button class="search-engine-name" id="search-engine-name">必应</button>
+                    <input type="text" id="txt" class="search-input" placeholder="不懂么？不懂就搜，给老子搜！"/>
+                    <button class="search-btn" id="search-btn">搜索</button>
+                </div>
+                <!-- 搜索引擎 -->
+                <div class="search-engine">
+                    <div class="search-engine-head">
+                        <strong class="search-engine-tit">选择您的搜索引擎：</strong>
+                    </div>
+                    <ul class="search-engine-list">
+                    </ul>
+                </div>
+            </div>
+            </section>
+            <!--导航分类范例1，请根据自己的需求进行修改-->
+            <section class="item card-box" id="row-1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="item-tit">
+                        <strong>不常用服务🔝</strong>
+                    </div>
+                    <!--获取内容列表-->
+                    <div class="clearfix two-list-box">
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="https://fakeupdate.net/" class="card-link" target="_blank">
+                            <div class="card-tit">Fake更新页</div>
+                            <div class="card-desc">Windows正在想办法蓝屏，请不要关闭计算机</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="https://996.ninja/" class="card-link" target="_blank">
+                            <div class="card-tit">996忍者🔥</div>
+                            <div class="card-desc">提供摸鱼学理论指导</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="./eat/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">今日吃什么好叻</div>
+                            <div class="card-desc">选择困难症患者的福音</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="https://lab.magiconch.com/nbnhhsh/" class="card-link" target="_blank">
+                            <div class="card-tit">能不能好好说话？</div>
+                            <div class="card-desc">小学没毕业也能上网了，真好啊</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="./word_count/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">字数统计工具</div>
+                            <div class="card-desc">写XX个字以上的XX，很烦誒</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="./Base64/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">Base64 编解码器</div>
+                            <div class="card-desc">GPTの傑作系列之一</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="./Time/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">简易网页时钟</div>
+                            <div class="card-desc">显示东八区当前时间，用于OBS</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="./scal/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">不太科学的计算器</div>
+                            <div class="card-desc">GPTの傑作系列之一</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+			<!--范例二 导航内容参考修改，如果需要更多的分类，拷贝整个section标签进行修改-->
+            <section class="item card-box" id="row-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="item-tit">
+                        <strong>DASHABI传媒📺</strong>
+                    </div>
+                    <!--获取内容列表-->
+                    <div class="clearfix ">
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="./IPTV/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">IPTV</div>
+                            <div class="card-desc">在线看电视节目，如有源失效或有可用源（IPV4限定），不可联系我</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="https://web4.lovelivegundam.top/" class="card-link" target="_blank">
+                            <div class="card-tit">生肉源</div>
+                            <div class="card-desc">某大佬出品，悄悄地看</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="https://worldcam.eu/" class="card-link" target="_blank">
+                            <div class="card-tit">Worldcam</div>
+                            <div class="card-desc">地球live</div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <a href="http://publicdomainradio.org/en/index.html" class="card-link" target="_blank">
+                            <div class="card-tit">Public Domain Radio</div>
+                            <div class="card-desc">公共电台音乐，上班用，下班不用</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section class="item card-box" id="row-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>捕捉市场情绪💸</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://goldprice.fun/" class="card-link" target="_blank">
+                                <div class="card-tit">实时金价</div>
+                                <div class="card-desc">以前我不理解大妈</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.macroview.club/" class="card-link" target="_blank">
+                                <div class="card-tit">Macroview</div>
+                                <div class="card-desc">你看这韭菜</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.numbeo.com/cost-of-living/" class="card-link" target="_blank">
+                                <div class="card-tit">各城市生活成本</div>
+                                <div class="card-desc">地球表面积510,072,000 km<sup>2</sup>，竟无我一寸立足之地</div>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            <section class="item card-box" id="row-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>硒砂瓜1.98一斤🍉</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.buzzing.cc/" class="card-link" target="_blank">
+                                <div class="card-tit">Buzzing</div>
+                                <div class="card-desc">用中文浏览国外社交媒体里的热门讨论</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://chinafactcheck.com/" class="card-link" target="_blank">
+                                <div class="card-tit">有据</div>
+                                <div class="card-desc">一个专注于核查国际新闻事实的网站，揭露网络流传的谣言和误解，提高公众的媒体素养。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://tophub.today/" class="card-link" target="_blank">
+                                <div class="card-tit">今日热榜</div>
+                                <div class="card-desc">今日厕所大事件汇总</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            <section class="item card-box" id="row-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>我太想进步了🤲</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://basic.smartedu.cn/" class="card-link" target="_blank">
+                                <div class="card-tit">国家中小学智慧教育平台</div>
+                                <div class="card-desc">国家智慧教育公共服务平台</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://le.ouchn.cn" class="card-link" target="_blank">
+                                <div class="card-tit">终身教育平台</div>
+                                <div class="card-desc">国家开放大学推出的在线学习平台，提供多种课程资源，涵盖文化、职业、心理、健康等领域</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://vocational.smartedu.cn" class="card-link" target="_blank">
+                                <div class="card-tit">国家职业教育智慧教育平台</div>
+                                <div class="card-desc">国家智慧教育公共服务平台</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://openstax.org/" class="card-link" target="_blank">
+                                <div class="card-tit">OpenStax</div>
+                                <div class="card-desc">The world’s largest publisher of open education resources and a provider of interactive learning technologies and education research for high school and college.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://pup6.yunzhan365.com/bookcase/jmyr/index.html" class="card-link" target="_blank">
+                                <div class="card-tit">北大出版社电子书架</div>
+                                <div class="card-desc"></div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.gmzyjc.com/site/" class="card-link" target="_blank">
+                                <div class="card-tit">光明中医教材</div>
+                                <div class="card-desc">https://gitee.com/gmzy_admin/gmzyjc</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.academia.edu/" class="card-link" target="_blank">
+                                <div class="card-tit">Academia</div>
+                                <div class="card-desc">Academia.edu 是一个分享学术研究的商业平台，由来自世界各地的研究人员上传和分发。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.geogebra.org/" class="card-link" target="_blank">
+                                <div class="card-tit">geogebra</div>
+                                <div class="card-desc">GeoGebra是一款动态数学（几何）软件</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.keybr.com/" class="card-link" target="_blank">
+                                <div class="card-tit">Typing Practice</div>
+                                <div class="card-desc">学习如何提高打字速度</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://elements.wlonk.com/" class="card-link" target="_blank">
+                                <div class="card-tit">元素周期表</div>
+                                <div class="card-desc">This pictorial periodic table is colorful, fun, and packed with information. </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://ctext.org/zhs" class="card-link" target="_blank">
+                                <div class="card-tit">中国哲学书电子化计划</div>
+                                <div class="card-desc">一个线上开放电子图书馆，为中外学者提供中国历代传世文献，力图超越印刷媒体限制，通过电子科技探索新方式与古代文献进行沟通。 </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://freemagazines.top/" class="card-link" target="_blank">
+                                <div class="card-tit">Free Magazines</div>
+                                <div class="card-desc">Download free magazines and read PDF e-magazines online. Access a wide range of digital magazines available for instant download.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://annas-archive.org/" class="card-link" target="_blank">
+                                <div class="card-tit">Anna’s Archive</div>
+                                <div class="card-desc">The largest truly open library in human history.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://archive.org/" class="card-link" target="_blank">
+                                <div class="card-tit">Internet Archive</div>
+                                <div class="card-desc">A non-profit library of millions of free books, movies, software, music, websites, and more.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/meetqy/aspoem" class="card-link" target="_blank">
+                                <div class="card-tit">AsPoem</div>
+                                <div class="card-desc">现代化诗词学习网站，一个更加注重 UI和阅读体验 的诗词网站。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/hehonghui/awesome-english-ebooks" class="card-link" target="_blank">
+                                <div class="card-tit">awesome-english-ebooks</div>
+                                <div class="card-desc">经济学人、纽约客等英语外刊杂志下载</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://openstd.samr.gov.cn/bzgk/gb/index" class="card-link" target="_blank">
+                                <div class="card-tit">国家标准全文公开系统</div>
+                                <div class="card-desc">本系统公开了国家市场监督管理总局、国家标准委2017年1月1日前已批准发布的所有强制性国家标准、推荐性国家标准（非采标）、指导性技术文件。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.drugfuture.com/cnpat/cn_patent.asp" class="card-link" target="_blank">
+                                <div class="card-tit">中国专利全文</div>
+                                <div class="card-desc">专利全文自动打包并打开下载，一次性完成整个专利全文下载而不需要一页页保存。</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-6">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>去你🐴的vx文件传输</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://wormhole.app/" class="card-link" target="_blank">
+                                <div class="card-tit">wormhole</div>
+                                <div class="card-desc">Wormhole lets you share files with end-to-end encryption and a link that automatically expires.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://im.iamtsm.cn/" class="card-link" target="_blank">
+                                <div class="card-tit">tl-rtc-file</div>
+                                <div class="card-desc">WebRTC P2P online web media streaming tool (for files, video, screen, live streaming, text) with management and statistical monitoring capabilities.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://wetransfer.com/" class="card-link" target="_blank">
+                                <div class="card-tit">wetransfer</div>
+                                <div class="card-desc">一家荷兰互联网计算机文件传输服务公司</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://cowtransfer.com/" class="card-link" target="_blank">
+                                <div class="card-tit">奶牛快传</div>
+                                <div class="card-desc"></div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/localsend/localsend" class="card-link" target="_blank">
+                                <div class="card-tit">LocalSend</div>
+                                <div class="card-desc">一个自由、开源的应用程序，允许你在本地网络上安全地与附近设备分享文件和消息，无需互联网连接。</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-7">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>唯一指定联系邮箱📧</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://edumail.icu/mailbox" class="card-link" target="_blank">
+                                <div class="card-tit">Edumail</div>
+                                <div class="card-desc">Discover the ultimate solution for protecting your inbox privacy with our temporary email website.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://etempmail.com/zh" class="card-link" target="_blank">
+                                <div class="card-tit">eTempMail</div>
+                                <div class="card-desc">Temporary Emails with free choices.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://smailpro.com/" class="card-link" target="_blank">
+                                <div class="card-tit">SMAIL PRO</div>
+                                <div class="card-desc">Protect yourself from spam, malware and trade user information by using disposable email or fake email of SMAILPRO</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://10minutesemail.net/" class="card-link" target="_blank">
+                                <div class="card-tit">10 Minute Mail</div>
+                                <div class="card-desc">TThe Ultimate Guide to Temporary Email Addresses</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://adguard.com/zh_cn/adguard-temp-mail/overview.html" class="card-link" target="_blank">
+                                <div class="card-tit">AdGuard 匿名邮箱</div>
+                                <div class="card-desc">免费一次性电子信箱生成器</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-8">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>赛博游乐场🎡</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://imgflip.com/memetemplates" class="card-link" target="_blank">
+                                <div class="card-tit">Meme生成器</div>
+                                <div class="card-desc">Blank meme templates for the most popular and latest memes. Over 1 million templates, updated continously.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://haoduck.com/demo/tbpl.html" class="card-link" target="_blank">
+                                <div class="card-tit">淘宝评论生成器</div>
+                                <div class="card-desc">宝贝收到了，卖家发货很快。物流超级快。宝贝与卖家描述的完全一致。舍友看了也觉得很喜欢。让我惊喜的是这比我想象中的还要好。总体来说是一次很好的购物。没什么可挑剔的，下次还会再来。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://tikolu.net/emojimix/%F0%9F%98%82+%F0%9F%A4%A4" class="card-link" target="_blank">
+                                <div class="card-tit">Emoji合成器</div>
+                                <div class="card-desc">Combine two emojis into one. Over 50,000 combinations are available!</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://datamuse.guokr.com/web?page=ltd&from_channel=play&from=GK" class="card-link" target="_blank">
+                                <div class="card-tit">国产烂剧制造厂</div>
+                                <div class="card-desc">农村来的质朴青年DASHABI在城市的打拼，为了跟上时代的潮流和融入这个充满诱惑的大千世界。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://suulnnka.github.io/BullshitGenerator/index.html" class="card-link" target="_blank">
+                                <div class="card-tit">狗屁不通文章生成器</div>
+                                <div class="card-desc">从这个角度来看， 罗素·贝克曾经说过，一个人即使已登上顶峰，也仍要自强不息。这不禁令我深思。 我们都知道，只要有意义，那么就必须慎重考虑。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.dayin.page/" class="card-link" target="_blank">
+                                <div class="card-tit">习题打印生成器</div>
+                                <div class="card-desc">数学题，一键生成</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://edu.chatgpt.org.uk/" class="card-link" target="_blank">
+                                <div class="card-tit">学生卡生成器</div>
+                                <div class="card-desc">Fake SID/Certificate Generator</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://fauxid.com/" class="card-link" target="_blank">
+                                <div class="card-tit">Fauxid</div>
+                                <div class="card-desc">Fake Name & Identity Generator</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://en.shindanmaker.com/790697" class="card-link" target="_blank">
+                                <div class="card-tit">奇妙的中二称号生成器</div>
+                                <div class="card-desc"> DASHABI 称号：黄泉葬仪 武器：镰刀 强度：无害 阵营：中立善良</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://new-words.vercel.app/" class="card-link" target="_blank">
+                                <div class="card-tit">新名词生成器</div>
+                                <div class="card-desc">新程员解释：新程员就是说喜欢造轮子，但是又造的很一般；喜欢划水，但是又不敢明目张胆地划；喜欢写代码，但是下了班就只想睡觉的快乐程序员。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.mazegenerator.net/" class="card-link" target="_blank">
+                                <div class="card-tit">迷宫生成器</div>
+                                <div class="card-desc">Maze Generator</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="http://www.wenangou.com/xieyin.html" class="card-link" target="_blank">
+                                <div class="card-tit">谐音成语生成器</div>
+                                <div class="card-desc">随屎随地 招贤纳屎 终身大屎 一五一屎 屎事求是 脚踏屎地 各屎各样 屎字街口</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://bww.lolicon.app/" class="card-link" target="_blank">
+                                <div class="card-tit">黑白生草图制作器</div>
+                                <div class="card-desc">時には、物事はいつも思うようにならない</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-9">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>网线直达🗺️</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://test.ustc.edu.cn/" class="card-link" target="_blank">
+                                <div class="card-tit">中国科学技术大学测速网站</div>
+                                <div class="card-desc">本测速服务器位于中国科学技术大学网络空间安全学院</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="http://revproxy.ustc.edu.cn:8000/" class="card-link" target="_blank">
+                                <div class="card-tit">中国科学技术大学反向代理服务器</div>
+                                <div class="card-desc">相对于传统的为用户提供网络访问的代理服务器不同，反向代理服务器主要是为web服务器对外提供服务使用。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://scamalytics.com/" class="card-link" target="_blank">
+                                <div class="card-tit">Scamalytics</div>
+                                <div class="card-desc">IP address fraud risk lookup. Check IP addresses on our website or use our API. Check for proxies and fraud profile.</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://ip.skk.moe/" class="card-link" target="_blank">
+                                <div class="card-tit">IP 地址查询</div>
+                                <div class="card-desc">IP 地址查询，网络连通性检查，CDN 命中节点测试，DNS 出口查询</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://ipcheck.ing/#/" class="card-link" target="_blank">
+                                <div class="card-tit">IPCheck.ing</div>
+                                <div class="card-desc">A better and open source IP Toolbox.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-10">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>掌上很行📴</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.socpk.com/" class="card-link" target="_blank">
+                                <div class="card-tit">移动芯片排行</div>
+                                <div class="card-desc">极客湾制作</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://gitlab.com/AuroraOSS/AuroraStore" class="card-link" target="_blank">
+                                <div class="card-tit">AuroraStore</div>
+                                <div class="card-desc">第三方Playstore</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://jamcz.com/" class="card-link" target="_blank">
+                                <div class="card-tit">晨钟网络科技</div>
+                                <div class="card-desc">搞机工具箱</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.apkmirror.com/" class="card-link" target="_blank">
+                                <div class="card-tit">APKMirror</div>
+                                <div class="card-desc">Free and safe Android APK downloads.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-11">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>同性网项目👬</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/Tlaster/YourAV" class="card-link" target="_blank">
+                                <div class="card-tit">YourAV</div>
+                                <div class="card-desc">宇宙级最轻量杀毒软件</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/bitdust/WamaCry" class="card-link" target="_blank">
+                                <div class="card-tit">WamaCry</div>
+                                <div class="card-desc">假装自己是个病毒</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/Anduin2017/HowToCook" class="card-link" target="_blank">
+                                <div class="card-tit">程序员做饭指南</div>
+                                <div class="card-desc">会的人不看，看的人懒得做</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/nwuzmedoutlook/university" class="card-link" target="_blank">
+                                <div class="card-tit">Github大学</div>
+                                <div class="card-desc">国内高校课程资源纯手工整理</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/zserge/awfice?tab=readme-ov-file" class="card-link" target="_blank">
+                                <div class="card-tit">Awfice</div>
+                                <div class="card-desc">The world smallest office suite</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/jitsi/jitsi-meet" class="card-link" target="_blank">
+                                <div class="card-tit">Jitsi Meet</div>
+                                <div class="card-desc">安全、简单且可扩展的视频会议，您可以将其用作独立应用程序或嵌入到您的 Web 应用程序中。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/xiaolincoder/CS-Base" class="card-link" target="_blank">
+                                <div class="card-tit">小林 x 图解计算机基础</div>
+                                <div class="card-desc">图解计算机网络、操作系统、计算机组成、数据库，共 1000 张图 + 50 万字，破除晦涩难懂的计算机基础知识，让天下没有难懂的八股文！</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/akira-cn/moyu" class="card-link" target="_blank">
+                                <div class="card-tit">Github 摸鱼指北</div>
+                                <div class="card-desc">噫！有些奇奇怪怪的东西混进了GitHub 🤡</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/holynova/gushi_namer" class="card-link" target="_blank">
+                                <div class="card-tit">古诗文起名</div>
+                                <div class="card-desc">利用诗经 楚辞 唐诗 宋词等给小朋友起名字</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/solidSpoon/DashPlayer" class="card-link" target="_blank">
+                                <div class="card-tit">DashPlayer</div>
+                                <div class="card-desc">一款专为英语学习打造的视频播放器</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/sun0225SUN/Awesome-Love-Code" class="card-link" target="_blank">
+                                <div class="card-tit">✨Awesome Love Code✨</div>
+                                <div class="card-desc">❤️表白代码收藏馆❤️</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/solidSpoon/DashPlayer" class="card-link" target="_blank">
+                                <div class="card-tit">DashPlayer</div>
+                                <div class="card-desc">一款专为英语学习打造的视频播放器</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://github.com/solidSpoon/DashPlayer" class="card-link" target="_blank">
+                                <div class="card-tit">DashPlayer</div>
+                                <div class="card-desc">一款专为英语学习打造的视频播放器</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+            <section class="item card-box" id="row-12">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="item-tit">
+                            <strong>铁锅大乱炖🥘</strong>
+                        </div>
+                        <!--获取内容列表-->
+                        <div class="clearfix two-list-box">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://315.cca.org.cn/" class="card-link" target="_blank">
+                                <div class="card-tit">全国消协智慧315</div>
+                                <div class="card-desc">我要投诉！</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.12348.gov.cn" class="card-link" target="_blank">
+                                <div class="card-tit">中国法律服务网</div>
+                                <div class="card-desc">请律师 · 办公证 · 求法援 · 找调解 · 寻鉴定 · 要仲裁 · 案例库 · 法律法规. </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://renwuzhi.wiki/" class="card-link" target="_blank">
+                                <div class="card-tit">人物志</div>
+                                <div class="card-desc">历史人物小资料库</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://kjxb.org/" class="card-link" target="_blank">
+                                <div class="card-tit">跨境小白</div>
+                                <div class="card-desc">一个专门为跨境电商职场维权评价吐槽的网站、在里面您可以客观尽情反馈或评价某公司的不尽人意。</div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="https://www.clinkorz.com/" class="card-link" target="_blank">
+                                <div class="card-tit">Clinkorz</div>
+                                <div class="card-desc">Pokémon Gallery</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>            
+
+            <!--页脚-->
+            <footer class="footer">
+            <div class="container">
+                <div class="rwo">
+                    <div class="col-md-12">
+                        <p>
+                            本站内容COPY自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系邮箱：dashabi@national.shitposting.agency
+                        </p>
+                        
+                        <p>
+                            Pasteleft © 2024-Now DASHABI指北 No Right Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </footer>
+        </div>
+        <!--内容区域-->
+    </div>
+    <div id="get-top" title="回到顶部">       
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+    </div>
+    
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <script src="min.js"></script>
+    
+<script>
+window.onscroll = function(){
+//回到顶部
+var sllTop = document.documentElement.scrollTop||document.body.scrollTop;
+if(sllTop>240){
+  $('#get-top').css('display','block')
+}else{
+  $('#get-top').css('display','none')
+}
+}
+$('#get-top').click(function(){ 
+  $('body,html').animate({
+    scrollTop: 0
+  }, 800);//点击回到顶部按钮，数字越小越快
+})
+//判断用户使用的设备
+var deviceVal  = browserRedirect();
+function browserRedirect() {
+  var sUserAgent = navigator.userAgent.toLowerCase();
+  var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+  var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+  var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+  var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+  var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+  var bIsAndroid = sUserAgent.match(/android/i) == "android";
+  var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+  var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+  if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+    return 'phone';
+  } else {
+    return 'pc';
+  }
+}
+  $('.nav-btn').on('click', function () {
+    $('.nav').toggleClass('showNav');
+    $(this).toggleClass('animated2');
+  });
+ 
+// 默认搜索引擎的内容，如果界面修改了需要同步修改
+var thisSearch = 'https://cn.bing.com/search?q=';
+
+$('#txt').keydown(function(ev){
+    // 回车键的处理
+    if(ev.keyCode==13){
+        window.open(thisSearch + $('#txt').val())
+        // $('#txt').val('');
+        $('#box ul').html('')
+    }
+})
+$(function(){
+  // 搜索引擎列表，样式一行五个内容，自动换行
+  var search = {
+    data: [{
+        name: '必应',
+      url: 'https://cn.bing.com/search?q='
+    }, {
+        name: '百度',
+      url: 'https://www.baidu.com/s?wd='
+    }, {
+        name: '谷歌',
+      url: 'https://www.google.com/search?q='
+    }, {
+        name: 'Bing',
+      url: 'https://www.bing.com/search?q='
+    }, {
+      name: 'DDG',
+      url: 'https://duckduckgo.com/?t=h_&q='
+    }, {
+      name: 'Yandex',
+      url: 'https://ya.ru/search/?text='
+    }, {
+      name: '搜狗',
+      url: 'https://www.sogou.com/web?query='
+    }, {
+      name: '淘宝',
+      url: 'https://s.taobao.com/search?q='
+    }, {
+      name: '京东',
+      url: 'http://search.jd.com/Search?keyword='
+    }, {
+      name: '天猫',
+      url: 'https://list.tmall.com/search_product.htm?q='
+    }, {
+      name: '知乎',
+      url: 'https://www.zhihu.com/search?type=content&q='
+    }, {
+      name: '微博',
+      url: 'https://s.weibo.com/weibo/'
+    }, {
+      name: 'Bilibili',
+      url: 'http://search.bilibili.com/all?keyword='
+    }, {
+      name: '豆瓣',
+      url: 'https://www.douban.com/search?source=suggest&q='
+    }, {
+      name: 'GitHub',
+      url: 'https://github.com/search?q='
+    }]
+  }
+  for(var i = 0; i < search.data.length; i++){
+    var addList = '<li>' + search.data[i].name + '</li>'
+    $('.search-engine-list').append(addList);
+  }
+  $('.search-engine-name, .search-engine').hover(function() {
+    $('.search-engine').css('display', 'block')
+  }, function() {
+    $('.search-engine').css('display', 'none')
+  });
+  $('.search-engine-list li').click(function() {
+    var _index = $(this).index();
+    var searchNameBtn = document.getElementById("search-engine-name");
+    searchNameBtn.innerHTML = search.data[_index].name;
+    thisSearch = search.data[_index].url;
+    $('.search-engine').css('display', 'none')
+  })
+})
+$("#search-btn").click(function(){
+  var textValue = $('#txt').val();
+  if(textValue != ''){
+    window.open(thisSearch + textValue)
+  }
+});
+</script>
+</div>
+</body>
+</html>

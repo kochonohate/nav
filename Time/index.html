@@ -1,0 +1,76 @@
+<head>
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'>
+
+<style>
+
+p {
+    margin: 0;
+}
+
+#clock {
+    color: #FFFFFF;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: bolder;
+    -text-align: center;
+    text-shadow: 3px 3px 3px grey;
+    position: absolute;
+    padding: 45% 90%;
+}
+
+#clock #time {
+    font-size: 32px;
+}
+
+#clock #date {
+    font-size: 24px;
+}
+
+</style>
+
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+    }
+    </script>
+
+</head>
+
+<body translate="no" >
+  <div id="clock" x-data="app()" x-init="startClock();updateClock();">
+    <p id="time" x-text="time">00:00:00</p>
+    <p id="date" x-text="date">Loading... </p>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js'></script>
+      <script id="rendered-js" >
+
+function app() {
+  return {
+    time: 0,
+    date: 0,
+    week: ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAT', 'SATURDAY'],
+    startClock() {setInterval(() => {
+        this.updateClock();
+      }, 1000);},
+    updateClock() {
+      var newDate = new Date();
+      this.time = this.padNum(newDate.getHours(), 2) + ':' + this.padNum(newDate.getMinutes(), 2) + ':' + this.padNum(newDate.getSeconds(), 2);
+      this.date = this.padNum(newDate.getFullYear(), 4) + '-' + this.padNum(newDate.getMonth() + 1, 2) + '-' + this.padNum(newDate.getDate(), 2) + ' | ' + this.week[newDate.getDay()];
+    },
+    padNum: function (num, digit) {
+      var zero = '';
+      for (var i = 0; i < digit; i++) {
+        zero += '0';
+      }
+      return (zero + num).slice (-digit);
+    } };
+
+}
+
+    </script>
+
+</body>
+
+</html> 
+
