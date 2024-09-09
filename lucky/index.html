@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易抽奖工具</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        button:active {
+            background-color: #1e7e34;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>简易抽奖工具</h1>
+    <textarea id="names" placeholder="请输入参与者姓名，每行一个..."></textarea>
+    <button onclick="pickWinner()">抽奖</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function pickWinner() {
+        const namesText = document.getElementById('names').value.trim();
+        const namesArray = namesText.split('\n').filter(name => name.trim() !== '');
+        
+        if (namesArray.length === 0) {
+            document.getElementById('result').textContent = '请先输入参与者姓名';
+            return;
+        }
+        
+        const randomIndex = Math.floor(Math.random() * namesArray.length);
+        const winner = namesArray[randomIndex];
+        
+        document.getElementById('result').textContent = '恭喜 ' + winner + '！你是幸运儿！';
+    }
+</script>
+
+</body>
+</html>
