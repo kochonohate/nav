@@ -4,8 +4,7 @@
   "short_name": "MultiCalc",
   "lang": "en-US",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+
   "background_color": "#fff",
   "description": "A powerful, modern, multifunctional calculator made for everyone.",
   "icons": [
